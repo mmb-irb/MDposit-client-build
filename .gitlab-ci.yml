@@ -9,12 +9,13 @@ stages:
 
 before_script:
   - apt-get update && apt-get install -y curl
-  - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-  - export NVM_DIR="$HOME/.nvm"
-  - [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-  - nvm install 16.9.1
-  - nvm use 16.9.1
-  - node -v
+  - |
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    nvm install 16.9.1
+    nvm use 16.9.1
+    node -v
 
 test_async:
   stage: test
