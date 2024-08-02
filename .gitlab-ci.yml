@@ -17,12 +17,7 @@ before_script:
     nvm use 16.19.1
     node -v
     npm -v
-
-build_job:
-  stage: build
-  script:
-    - echo "echoooo"
-
+ 
 build_job:
   stage: build
   script:
@@ -32,4 +27,16 @@ build_job:
     - touch .env
     - npm install
     - npm run build
-    - ls -la build
+    - cp -r build ../build
+
+deploy_job:
+  stage: deploy
+  script:
+    - git config --global user.email "genis.bayarri@irbbarcelona.org"
+    - git config --global user.name "Genís"
+    - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@mmb.irbbarcelona.org/gitlab/gbayarri/mdposit-client-build.git
+    - cd mdposit-client-build
+    - cp -r ../build .
+    - git add build
+    - git commit -m "Deploy new build"
+    - git push origin main
