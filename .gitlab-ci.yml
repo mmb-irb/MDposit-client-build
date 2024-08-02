@@ -26,9 +26,10 @@ build_job:
 build_job:
   stage: build
   script:
-    #- git clone https://mmb.irbbarcelona.org/gitlab/d.beltran.anadon/mdposit_client.git
     - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@mmb.irbbarcelona.org/gitlab/d.beltran.anadon/mdposit_client.git
+    - cp host-config.js mdposit_client/src
     - cd mdposit_client
+    - touch .env
     - npm install
     - npm run build
     - ls -la build
