@@ -1,9 +1,7 @@
 stages:
-  - deploy
+  - test
 
-deploy:
-  stage: deploy
-  only:
-    - main
+test-job:
+  stage: test
   script:
-    - echo "Deploying..."
+    - echo "Hello, GitLab Runner!"
