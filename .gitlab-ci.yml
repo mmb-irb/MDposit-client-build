@@ -1,25 +1,7 @@
 stages:
   - build
-  - test
-  - deploy
 
-variables:
-  NODE_VERSION: "14"
 
-before_script:
-  - apt-get update -qq && apt-get install -y -qq curl
-  - curl -sL https://deb.nodesource.com/setup_$NODE_VERSION.x | bash -
-  - apt-get install -y nodejs
-
-build:
-  stage: build
-  script:
-    - npm install
-
-test:
-  stage: test
-  script:
-    - npm test
 
 deploy:
   stage: deploy
