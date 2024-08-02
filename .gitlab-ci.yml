@@ -18,6 +18,11 @@ before_script:
     node -v
     npm -v
 
+build_job:
+  stage: build
+  script:
+    - echo "echoooo"
+
 #build_job:
 #  stage: build
 #  script:
