@@ -4,7 +4,7 @@ stages:
   - deploy
 
 variables:
-  NODE_VERSION: "16.19.1"
+  NODE_VERSION: "14"
 
 before_script:
   - apt-get update -qq && apt-get install -y -qq curl
