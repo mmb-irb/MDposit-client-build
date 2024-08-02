@@ -23,12 +23,12 @@ build_job:
   script:
     - echo "echoooo"
 
-#build_job:
-#  stage: build
-#  script:
+build_job:
+  stage: build
+  script:
     #- git clone https://mmb.irbbarcelona.org/gitlab/d.beltran.anadon/mdposit_client.git
-    #- git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@mmb.irbbarcelona.org/gitlab/d.beltran.anadon/mdposit_client.git
-    #- cd mdposit_client
-    #- npm install
-    #- npm run build
-    #- ls -la build
+    - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@mmb.irbbarcelona.org/gitlab/d.beltran.anadon/mdposit_client.git
+    - cd mdposit_client
+    - npm install
+    - npm run build
+    - ls -la build
