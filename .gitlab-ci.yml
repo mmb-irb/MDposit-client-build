@@ -5,7 +5,7 @@ cache:
     - node_modules/
 
 stages:
-  - test
+  - build
 
 before_script:
   - apt-get update && apt-get install -y curl
@@ -17,8 +17,11 @@ before_script:
     nvm use 16.9.1
     node -v
 
-test_async:
-  stage: test
+build_job:
+  stage: build
   script:
+    #- git clone https://mmb.irbbarcelona.org/gitlab/d.beltran.anadon/mdposit_client.git
+    - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@mmb.irbbarcelona.org/gitlab/d.beltran.anadon/mdposit_client.git
+    - cd mdposit_client
     - npm install
-    - npm test
+    - npm run build
