@@ -29,6 +29,9 @@ build_job:
     - npm install
     - npm run build
     - cp -r build ../build
+  artifacts:
+    paths:
+      - build
 
 deploy_job:
   stage: deploy
