@@ -13,16 +13,17 @@ before_script:
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
     export NVM_DIR="$HOME/.nvm"
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-    nvm install 16.9.1
-    nvm use 16.9.1
+    nvm install 16.19.1
+    nvm use 16.19.1
     node -v
+    npm -v
 
-build_job:
-  stage: build
-  script:
+#build_job:
+#  stage: build
+#  script:
     #- git clone https://mmb.irbbarcelona.org/gitlab/d.beltran.anadon/mdposit_client.git
-    - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@mmb.irbbarcelona.org/gitlab/d.beltran.anadon/mdposit_client.git
-    - cd mdposit_client
-    - npm install
-    - npm run build
-    - ls -la build
+    #- git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@mmb.irbbarcelona.org/gitlab/d.beltran.anadon/mdposit_client.git
+    #- cd mdposit_client
+    #- npm install
+    #- npm run build
+    #- ls -la build
