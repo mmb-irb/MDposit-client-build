@@ -25,3 +25,4 @@ build_job:
     - cd mdposit_client
     - npm install
     - npm run build
+    - ls -la build
