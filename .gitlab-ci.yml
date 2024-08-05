@@ -32,6 +32,9 @@ build_job:
   artifacts:
     paths:
       - build
+  only:
+    changes:
+      - host-config.js
 
 deploy_job:
   stage: deploy
@@ -44,3 +47,6 @@ deploy_job:
     - git add build
     - git commit -m "Deploy new build"
     - git push origin main
+  only:
+    changes:
+      - host-config.js
