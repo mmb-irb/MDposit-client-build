@@ -1,0 +1,40 @@
+stages:
+  - build
+  - deploy
+
+build_job:
+  stage: build
+  script:
+    - echo "Building jsc"
+    - cd jsc
+    - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@mmb.irbbarcelona.org/gitlab/d.beltran.anadon/mdposit_client.git
+    - cp host-config.js mdposit_client/src
+    - cd mdposit_client
+    - touch .env
+    - cp -r /home/gitlab-runner/node_modules .
+    - npm run build
+    - cp -r build ../build
+  artifacts:
+    paths:
+      - build
+  only:
+    changes:
+      - jsc/host-config.js
+
+deploy_job:
+  stage: deploy
+  script:
+    - cd jsc
+    - git config --global user.email "genis.bayarri@irbbarcelona.org"
+    - git config --global user.name "Genís"
+    - git clone https://oauth2:${GITLAB_ACCESS_TOKEN}@mmb.irbbarcelona.org/gitlab/gbayarri/mdposit-client-build.git
+    - cd mdposit-client-build
+    - cp -r ../build .
+    - git add build
+    - git commit -m "Deploy new build for jsc"
+    - git push origin main
+  dependencies:
+    - build_job
+  only:
+    changes:
+      - jsc/host-config.js
