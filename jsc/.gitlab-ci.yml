@@ -26,10 +26,10 @@ deploy_job:
   script:
     - cd jsc
     - git config --global user.email "genis.bayarri@irbbarcelona.org"
-    - git config --global user.name "Genís"
+    - git config --global user.name "Automatic CI/CD"
     - git clone https://oauth2:${GITLAB_ACCESS_TOKEN}@mmb.irbbarcelona.org/gitlab/gbayarri/mdposit-client-build.git
     - cd mdposit-client-build
-    - cp -r ../jsc/mdposit_client/build .
+    - cp -r ../build .
     - git add build
     - git commit -m "Deploy new build for jsc"
     - git push origin main
