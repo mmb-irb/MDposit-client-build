@@ -16,7 +16,7 @@ build_job:
     - cp -r build ../build
   artifacts:
     paths:
-      - build
+      - jsc/mdposit_client/build
   only:
     changes:
       - jsc/host-config.js
@@ -29,7 +29,7 @@ deploy_job:
     - git config --global user.name "Genís"
     - git clone https://oauth2:${GITLAB_ACCESS_TOKEN}@mmb.irbbarcelona.org/gitlab/gbayarri/mdposit-client-build.git
     - cd mdposit-client-build
-    - cp -r ../build .
+    - cp -r ../jsc/mdposit_client/build .
     - git add build
     - git commit -m "Deploy new build for jsc"
     - git push origin main
