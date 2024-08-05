@@ -28,8 +28,9 @@ deploy_job:
     - git clone https://oauth2:${GITLAB_ACCESS_TOKEN}@mmb.irbbarcelona.org/gitlab/gbayarri/mdposit-client-build.git
     - cd mdposit-client-build
     - cp -r ../../build ./jsc
-    - git status
-    - git add jsc/build
+    - cd jsc
+    - zip -r build.zip build
+    - git add build build.zip
     - git commit -m "Deploy new build for jsc"
     - git push origin main
   only:
