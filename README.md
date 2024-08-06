@@ -175,11 +175,25 @@ Execute the following git instructions (replacing NODE_ID by **node id**):
     git commit -m "Added new NODE_ID build"
     git push
 
-Now it starts the **automatic pipeline** in the gitlab repo. This process take several minutes and, once it's finished, a new **build folder** and a new **build.zip** file will be created in the **NODE_ID** folder. 
+Now it starts the **automatic pipeline** in the gitlab repo. This process takes several minutes and, once it's finished, a new **build folder** and a new **build.zip** file will be created in the **NODE_ID** folder. 
 
 Finally, update your **local repo** with the new content:
 
     git pull
+
+## Set Up CI/CD
+
+For downloading a private repo during the CI/CD pipeline, a **CI/CD variable** must be created:
+
+### Create Project Access Token
+
+Go to **Settings / Aceesss Tokens** and create a new **Project Access Token** with role **Owner** and **api** and **write_repository** scopes. Copy the value given once created.
+
+### Create CI/CD variable
+
+Go to **Settings / CI/CD** and expand the **Variables** section. Add variable with a **Key** name (ie GITLAB_ACCESS_TOKEN) and put as **Value** the Token given in the previous section.
+
+Use the value put in the **Key** field in the CI/CD pipeline.
 
 ## Credits
 
