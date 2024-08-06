@@ -20,4 +20,4 @@ before_script:
     npm -v
 
 include:
-  - local: 'jsc/.gitlab-ci.yml'
+  - local: 'jsc/ci.yml'
