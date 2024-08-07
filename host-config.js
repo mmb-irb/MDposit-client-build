@@ -25,6 +25,7 @@ const DEFAUL_HOST_CONFIGURATION = {
     optionsLabel: 'Options',
     optionsNiceNames: {},
     queryFields: defaultQueryFields,
+    options: []
 };
 
 // Set every host configuration
@@ -34,8 +35,7 @@ const HOST_CONFIGURATIONS = {
         api: 'API_REST_URL', // be aware that the URL must be the same as the one in the server (no relative paths allowed)))
         primaryColor: '#808081', // Grey,
         logo:'LOGO_MDPOSIT',
-        name:'WESITE_NAME',
-        options: []
+        name:'WESITE_NAME'
     }
 };
 

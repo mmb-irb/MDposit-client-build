@@ -133,6 +133,7 @@ Parameters that can be changed in this file:
 * optionsLabel - Name of the options in the browse selector and the data summary
 * optionsNiceNames - Nice names for every possible value in the options field. Non-matching values will remain as they are.
 * queryFields - Fields to be queried in the search and advanced search pages and their configurations
+* options - Additional flags which may be used by the client
 
 ### Modify .gitlab-ci.yml file
 
