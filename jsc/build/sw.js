@@ -18,7 +18,7 @@ workbox.precaching.cleanupOutdatedCaches();
 workbox.precaching.precacheAndRoute([
   {
     "url": "index.html",
-    "revision": "e5cf5e3e58394367808d76a77fcef824"
+    "revision": "3834bd9bebcf463df9e7e70d7608ab2f"
   },
   {
     "url": "static/css/accession.39bbe650.chunk.css",
@@ -365,8 +365,8 @@ workbox.precaching.precacheAndRoute([
     "revision": "31e2592213e24c5d52ed996a4a8dccec"
   },
   {
-    "url": "static/js/main.2bb308f3.js",
-    "revision": "01a6c43075ad3eed62740b7c9f50851f"
+    "url": "static/js/main.d9690047.js",
+    "revision": "24b2b0845913fdda6fbdf6b4af1b8174"
   },
   {
     "url": "static/js/markov.dd5e557c.chunk.js",
