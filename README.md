@@ -6,7 +6,7 @@ Builds for the different node clients of the **MDDB MDposit** project.
 
 ### Create new folder 
 
-Create a new folder with a **node id** as a name (ie jsc). Inside this folder, copy the **host-config.js** and **ci.yml** files from the root of the project. The structure of the new folder must be:
+Create a new folder with a **node id** as a name (ie jsc). Inside this folder, copy the [**host-config.js**](./host-config.js) and [**ci.yml**](./ci.yml) files from the root of the project. The structure of the new folder must be:
 
 * NODE_ID/
   * ci.yml
@@ -119,7 +119,7 @@ export default HOST_CONFIG;
 
 Parameters that can be changed in this file:
 
-* api - API URL to query. It must be an absolute URL. Take into account that, depending on the [**Virtual Hosts configuration**](../readme/setup.md#setting-up-virtual-hosts), this URL should look like `http(s)://your_server_ip/api/rest/`.
+* api - API URL to query. It must be an absolute URL. Take into account that, depending on the [**Virtual Hosts configuration**](https://mmb.irbbarcelona.org/gitlab/gbayarri/mddb-docker/-/blob/main/readme/setup.md#setting-up-virtual-hosts), this URL should look like `http(s)://your_server_ip/api/rest/`.
 * production - Set if this is production (true) or development (false)
 * global - Set if the API is the global (true) or federated (false)
 * name - Name to be displayed in the sheet header
@@ -137,7 +137,7 @@ Parameters that can be changed in this file:
 
 ### Modify .gitlab-ci.yml file
 
-Once the configuration files inside the **node id** folder have been set up it's time to modify the **.gitlab-ci.yml** file in the root of the project:
+Once the configuration files inside the **node id** folder have been set up it's time to modify the [**.gitlab-ci.yml**](./.gitlab-ci.yml) file in the root of the project:
 
 ```yml
 image: node:16
