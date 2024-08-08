@@ -18,7 +18,7 @@ workbox.precaching.cleanupOutdatedCaches();
 workbox.precaching.precacheAndRoute([
   {
     "url": "index.html",
-    "revision": "3834bd9bebcf463df9e7e70d7608ab2f"
+    "revision": "31d06826d719efb253a16317a21c83e1"
   },
   {
     "url": "static/css/accession.39bbe650.chunk.css",
@@ -317,8 +317,8 @@ workbox.precaching.precacheAndRoute([
     "revision": "64de8e9b02258c0a2ba11200cc10ef0a"
   },
   {
-    "url": "static/js/energies.9715b8d4.chunk.js",
-    "revision": "2db0edd8ca59f00f09bcf5662f0d280b"
+    "url": "static/js/energies.34f0baac.chunk.js",
+    "revision": "89d33eaed86be0b57e24b56f155410f4"
   },
   {
     "url": "static/js/epitopes.f3bd95f5.chunk.js",
@@ -365,8 +365,8 @@ workbox.precaching.precacheAndRoute([
     "revision": "31e2592213e24c5d52ed996a4a8dccec"
   },
   {
-    "url": "static/js/main.d9690047.js",
-    "revision": "24b2b0845913fdda6fbdf6b4af1b8174"
+    "url": "static/js/main.3f2e48b2.js",
+    "revision": "9d32d19465bb6a2a7a80690c2effed8e"
   },
   {
     "url": "static/js/markov.dd5e557c.chunk.js",

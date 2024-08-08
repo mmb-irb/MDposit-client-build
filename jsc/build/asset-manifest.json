@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.68c2412c.css",
-    "main.js": "./static/js/main.d9690047.js",
+    "main.js": "./static/js/main.3f2e48b2.js",
     "intersection-observer.js": "./static/js/intersection-observer.e95f0f77.chunk.js",
     "embed.css": "./static/css/embed.6f2ee28e.chunk.css",
     "embed.js": "./static/js/embed.0f7e2259.chunk.js",
@@ -51,7 +51,7 @@
     "hbonds.css": "./static/css/hbonds.9d049dbd.chunk.css",
     "hbonds.js": "./static/js/hbonds.bc363768.chunk.js",
     "energies.css": "./static/css/energies.699bce96.chunk.css",
-    "energies.js": "./static/js/energies.9715b8d4.chunk.js",
+    "energies.js": "./static/js/energies.34f0baac.chunk.js",
     "pockets.css": "./static/css/pockets.2bb27fa1.chunk.css",
     "pockets.js": "./static/js/pockets.840216fb.chunk.js",
     "mutations.css": "./static/css/mutations.6c47ede7.chunk.css",
@@ -155,7 +155,7 @@
     "static/media/eu.webp": "./static/media/eu.24e0692cadfaf44c016e.webp",
     "index.html": "./index.html",
     "main.68c2412c.css.map": "./static/css/main.68c2412c.css.map",
-    "main.d9690047.js.map": "./static/js/main.d9690047.js.map",
+    "main.3f2e48b2.js.map": "./static/js/main.3f2e48b2.js.map",
     "intersection-observer.e95f0f77.chunk.js.map": "./static/js/intersection-observer.e95f0f77.chunk.js.map",
     "embed.6f2ee28e.chunk.css.map": "./static/css/embed.6f2ee28e.chunk.css.map",
     "embed.0f7e2259.chunk.js.map": "./static/js/embed.0f7e2259.chunk.js.map",
@@ -205,7 +205,7 @@
     "hbonds.9d049dbd.chunk.css.map": "./static/css/hbonds.9d049dbd.chunk.css.map",
     "hbonds.bc363768.chunk.js.map": "./static/js/hbonds.bc363768.chunk.js.map",
     "energies.699bce96.chunk.css.map": "./static/css/energies.699bce96.chunk.css.map",
-    "energies.9715b8d4.chunk.js.map": "./static/js/energies.9715b8d4.chunk.js.map",
+    "energies.34f0baac.chunk.js.map": "./static/js/energies.34f0baac.chunk.js.map",
     "pockets.2bb27fa1.chunk.css.map": "./static/css/pockets.2bb27fa1.chunk.css.map",
     "pockets.840216fb.chunk.js.map": "./static/js/pockets.840216fb.chunk.js.map",
     "mutations.6c47ede7.chunk.css.map": "./static/css/mutations.6c47ede7.chunk.css.map",
@@ -265,6 +265,6 @@
   },
   "entrypoints": [
     "static/css/main.68c2412c.css",
-    "static/js/main.d9690047.js"
+    "static/js/main.3f2e48b2.js"
   ]
 }
