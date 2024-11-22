@@ -16,9 +16,9 @@ build_job:
   artifacts:
     paths:
       - build
-  only:
-    changes:
-      - jsc/host-config.js
+  #only:
+  #  changes:
+  #    - jsc/host-config.js
 
 deploy_job:
   stage: deploy
