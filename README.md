@@ -67,6 +67,7 @@ The host configuration file is used for **setting up** the target **API** and so
 
 ```js
 // Import default query fields
+// Import default query fields
 import defaultQueryFields from 'src/utils/constants/query-fields';
 
 // Set the default description
@@ -86,6 +87,7 @@ const DEFAUL_HOST_CONFIGURATION = {
     favicon: 'mdposit_favicon',
     description: DEFAULT_DESCRIPTION,
     logo: 'logo-mdposit',
+    logoLabel: '',
     primaryColor: '#808081', // Grey
     secondaryColor: '#fafafa', // Light grey
     searchExample: 'e.g. Orozco lab',
@@ -93,6 +95,7 @@ const DEFAUL_HOST_CONFIGURATION = {
     optionsLabel: 'Options',
     optionsNiceNames: {},
     queryFields: defaultQueryFields,
+    options: []
 };
 
 // Set every host configuration
@@ -101,7 +104,7 @@ const HOST_CONFIGURATIONS = {
     'localhost': {
         api: 'API_REST_URL', // be aware that the URL must be the same as the one in the server (no relative paths allowed)))
         primaryColor: '#808081', // Grey,
-        logo:'LOGO_MDPOSIT',
+        logoLabel: 'NODE_ID node',
         name:'WESITE_NAME'
     }
 };
@@ -126,6 +129,7 @@ Parameters that can be changed in this file:
 * favicon - Icon filename (without the format extension) to be displayed in the sheet header. Icons are located at public/.
 * description - Text or JSX to be displayed in the home page
 * logo - Logo filename (without the format extension) to be dipslayed on the top-left corner, in the header. Images are located at src/images/.
+* logoLabel - Label with the node name that will be shown alongside the logo image.
 * primaryColor - Color of the header and additional regions along the whole web page
 * secondaryColor - Color of non-primary regions along the whole web page
 * searchExample - Search example: This is shown in search bars as placeholder when they are empty

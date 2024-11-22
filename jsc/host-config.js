@@ -18,7 +18,8 @@ const DEFAUL_HOST_CONFIGURATION = {
     favicon: 'mdposit_favicon',
     description: DEFAULT_DESCRIPTION,
     logo: 'logo-mdposit',
-    primaryColor: '#808081', // Grey
+    logoLabel: '',
+    primaryColor: '#808080', // Grey
     secondaryColor: '#fafafa', // Light grey
     searchExample: 'e.g. Orozco lab',
     optionsField: undefined, // No browser selector and no data summary pie chart by default
@@ -33,8 +34,8 @@ const HOST_CONFIGURATIONS = {
     // Testing
     'localhost': {
         api: 'https://jsc.mddbr.eu/api/rest/', // be aware that the URL must be the same as the one in the server (no relative paths allowed)))
-        primaryColor: '#c5b96b', // Grey,
-        logo:'logo-mdposit-jsc',
+        primaryColor: '#c5b96b', // Golden,
+        logoLabel: 'JSC node',
         name:'MDposit JSC'
     }
 };

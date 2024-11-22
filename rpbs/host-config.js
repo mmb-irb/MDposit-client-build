@@ -19,7 +19,7 @@ const DEFAUL_HOST_CONFIGURATION = {
     description: DEFAULT_DESCRIPTION,
     logo: 'logo-mdposit',
     logoLabel: '',
-    primaryColor: '#808081', // Grey
+    primaryColor: '#808080', // Grey
     secondaryColor: '#fafafa', // Light grey
     searchExample: 'e.g. Orozco lab',
     optionsField: undefined, // No browser selector and no data summary pie chart by default
@@ -33,10 +33,10 @@ const DEFAUL_HOST_CONFIGURATION = {
 const HOST_CONFIGURATIONS = {
     // Testing
     'localhost': {
-        api: 'API_REST_URL', // be aware that the URL must be the same as the one in the server (no relative paths allowed)))
-        primaryColor: '#808081', // Grey,
-        logoLabel: 'NODE_ID node',
-        name:'WESITE_NAME'
+        api: 'https://rpbs.mddbr.eu/api/rest/', // be aware that the URL must be the same as the one in the server (no relative paths allowed)))
+        primaryColor: '#6bc5b8', // Turquoise,
+        logoLabel: 'RPBS node',
+        name:'MDposit RPBS'
     }
 };
 
