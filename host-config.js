@@ -11,7 +11,7 @@ const DEFAULT_DESCRIPTION = <>
 
 // Set default values for every host config fields
 // These values are used to fill missing values
-const DEFAUL_HOST_CONFIGURATION = {
+const DEFAULT_HOST_CONFIGURATION = {
     api: 'http://localhost:8081/rest/', // be aware that the URL must be the same as the one in the server (no relative paths allowed)
     production: false,
     name: 'MDposit',
@@ -44,7 +44,7 @@ const HOST_CONFIGURATIONS = {
 const HOST_CONFIG = HOST_CONFIGURATIONS['localhost'];
 
 // Fill the host configuration gaps with default values
-Object.entries(DEFAUL_HOST_CONFIGURATION).forEach(([ field, defaultValue ]) => {
+Object.entries(DEFAULT_HOST_CONFIGURATION).forEach(([ field, defaultValue ]) => {
     if (!HOST_CONFIG[field]) HOST_CONFIG[field] = defaultValue;
 });
 
