@@ -33,6 +33,8 @@ deploy_job:
     - git add build build.zip
     - git commit -m "Deploy new build for jsc"
     - git push origin main
+  dependencies:
+    - build_job
   only:
     changes:
       - jsc/host-config.js
