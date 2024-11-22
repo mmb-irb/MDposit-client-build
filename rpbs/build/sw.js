@@ -18,7 +18,7 @@ workbox.precaching.cleanupOutdatedCaches();
 workbox.precaching.precacheAndRoute([
   {
     "url": "index.html",
-    "revision": "54faa594615fede3ee7ca6f23e0ebf04"
+    "revision": "c6db915f421bc78b87a7b168be465527"
   },
   {
     "url": "static/css/1182.b3216727.chunk.css",
@@ -621,8 +621,8 @@ workbox.precaching.precacheAndRoute([
     "revision": "dd700e13ee212656932764f91448a1f6"
   },
   {
-    "url": "static/js/accession.90e11cca.chunk.js",
-    "revision": "60dd2c98ec1c9874b15d8420f34897f7"
+    "url": "static/js/accession.226f40fd.chunk.js",
+    "revision": "a55763132d5d1c0d117632d5a036eabd"
   },
   {
     "url": "static/js/advanced-search.fcbe64b5.chunk.js",
@@ -669,8 +669,8 @@ workbox.precaching.precacheAndRoute([
     "revision": "cc2fe391bcb1ed4e666b9b61e9ea42c6"
   },
   {
-    "url": "static/js/main.f14f1d3f.js",
-    "revision": "3894faa2b141ece707422df431e7563c"
+    "url": "static/js/main.a2d284cd.js",
+    "revision": "912b3a33261b845c33612de3a8c2da36"
   },
   {
     "url": "static/js/meta-analysis.d0c0f7ae.chunk.js",
