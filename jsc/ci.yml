@@ -15,9 +15,6 @@ build_job:
   artifacts:
     paths:
       - build
-  only:
-    changes:
-      - jsc/host-config.js
 
 deploy_job:
   stage: deploy
@@ -35,6 +32,3 @@ deploy_job:
     - git push origin main
   dependencies:
     - build_job
-  only:
-    changes:
-      - jsc/host-config.js
