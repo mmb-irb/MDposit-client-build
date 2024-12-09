@@ -22,3 +22,4 @@ before_script:
 include:
   - local: 'jsc/ci.yml'
   - local: 'rpbs/ci.yml'
+  - local: 'podman/ci.yml'
