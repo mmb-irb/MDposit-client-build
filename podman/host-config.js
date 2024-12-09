@@ -19,7 +19,7 @@ const DEFAULT_HOST_CONFIGURATION = {
     description: DEFAULT_DESCRIPTION,
     logo: 'logo-mdposit',
     logoLabel: '',
-    primaryColor: '#808081', // Grey
+    primaryColor: '#808080', // Grey
     secondaryColor: '#fafafa', // Light grey
     searchExample: 'e.g. Orozco lab',
     optionsField: undefined, // No browser selector and no data summary pie chart by default
