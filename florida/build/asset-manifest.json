@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.1cf9c198.css",
-    "main.js": "./static/js/main.f1b1ebfd.js",
+    "main.js": "./static/js/main.dcab795f.js",
     "intersection-observer.js": "./static/js/intersection-observer.e95f0f77.chunk.js",
     "embed.css": "./static/css/embed.2cea5d21.chunk.css",
     "embed.js": "./static/js/embed.fbb7d244.chunk.js",
@@ -215,7 +215,7 @@
     "static/media/index.test.js.snap": "./static/media/index.test.js.db6055b1791ff42d42f6.snap",
     "index.html": "./index.html",
     "main.1cf9c198.css.map": "./static/css/main.1cf9c198.css.map",
-    "main.f1b1ebfd.js.map": "./static/js/main.f1b1ebfd.js.map",
+    "main.dcab795f.js.map": "./static/js/main.dcab795f.js.map",
     "intersection-observer.e95f0f77.chunk.js.map": "./static/js/intersection-observer.e95f0f77.chunk.js.map",
     "embed.2cea5d21.chunk.css.map": "./static/css/embed.2cea5d21.chunk.css.map",
     "embed.fbb7d244.chunk.js.map": "./static/js/embed.fbb7d244.chunk.js.map",
@@ -388,6 +388,6 @@
   },
   "entrypoints": [
     "static/css/main.1cf9c198.css",
-    "static/js/main.f1b1ebfd.js"
+    "static/js/main.dcab795f.js"
   ]
 }
