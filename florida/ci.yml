@@ -5,7 +5,7 @@ stages:
 build_job:
   stage: build
   script:
-    - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@mmb.floridabarcelona.org/gitlab/d.beltran.anadon/mdposit_client.git
+    - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@mmb.irbbarcelona.org/gitlab/d.beltran.anadon/mdposit_client.git
     - cp florida/host-config.js mdposit_client/src
     - cd mdposit_client
     - touch .env
@@ -20,9 +20,9 @@ deploy_job:
   stage: deploy
   script:
     - cd florida
-    - git config --global user.email "genis.bayarri@floridabarcelona.org"
+    - git config --global user.email "genis.bayarri@irbbarcelona.org"
     - git config --global user.name "Automatic CI/CD"
-    - git clone https://oauth2:${GITLAB_ACCESS_TOKEN}@mmb.floridabarcelona.org/gitlab/gbayarri/mdposit-client-build.git
+    - git clone https://oauth2:${GITLAB_ACCESS_TOKEN}@mmb.irbbarcelona.org/gitlab/gbayarri/mdposit-client-build.git
     - cd mdposit-client-build
     - cp -r ../../build ./florida
     - cd florida
