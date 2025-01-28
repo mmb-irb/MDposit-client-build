@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/134.742a1071.chunk.css","mappings":"AAAA,oBACE,aACF,CAEA,8BACE,iBACF","sources":["pages/accession/density/style.module.css"],"sourcesContent":[".card {\n  margin: 0.1em 0;\n}\n\n.margined-bottom {\n  margin-bottom: 1em;\n}\n"],"names":[],"sourceRoot":""}
