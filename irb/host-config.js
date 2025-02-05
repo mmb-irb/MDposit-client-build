@@ -34,10 +34,23 @@ const HOST_CONFIGURATIONS = {
     // Testing
     'localhost': {
         api: 'https://irb.mddbr.eu/api/rest/', // be aware that the URL must be the same as the one in the server (no relative paths allowed)))
-        primaryColor: '#fb731e', // Orange,
+        primaryColor: '#BB00BB', // fuchsia
         logoLabel: 'IRB node',
         name:'MDposit IRB'
+    },
+    optionsField: 'metadata.COLLECTIONS',
+    optionsLabel: 'Collection',
+    optionsNiceNames: {
+        'cv19': 'BioExcel - COVID-19',
+        'mcns': 'MoDEL - Central Nervous System',
+        'model': 'MoDEL 2010',
+        'bigna': 'BIGNASim',
+        'abc': 'ABC',
+        'modtox': 'ModTox',
+        'null': 'Independent',
+        [null]: 'Independent',
     }
+
 };
 
 // Set the current host configuration
