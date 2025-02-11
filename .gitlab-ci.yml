@@ -23,7 +23,7 @@ build_job:
   stage: build
   script:
     - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@mmb.irbbarcelona.org/gitlab/d.beltran.anadon/mdposit_client.git
-    - cp irb/host-config.js mdposit_client/src
+    - cp NODE_ID/host-config.js mdposit_client/src
     - cd mdposit_client
     - touch .env
     - npm install
@@ -32,20 +32,24 @@ build_job:
   artifacts:
     paths:
       - build
+  only:
+    changes:
+      - NODE_ID/host-config.js
 
 deploy_job:
   stage: deploy
   script:
-    - cd irb
+    - cd NODE_ID
     - git config --global user.email "genis.bayarri@irbbarcelona.org"
     - git config --global user.name "Automatic CI/CD"
     - git clone https://oauth2:${GITLAB_ACCESS_TOKEN}@mmb.irbbarcelona.org/gitlab/gbayarri/mdposit-client-build.git
     - cd mdposit-client-build
-    - cp -r ../../build ./irb
-    - cd irb
+    - cp -r ../../build ./NODE_ID
+    - cd NODE_ID
     - zip -r build.zip build
     - git add build build.zip
-    - git commit -m "Deploy new build for irb"
+    - git commit -m "Deploy new build for NODE_ID"
     - git push origin main
-  dependencies:
-    - build_job
+  only:
+    changes:
+      - NODE_ID/host-config.js
