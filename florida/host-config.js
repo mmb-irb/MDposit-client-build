@@ -33,7 +33,7 @@ const DEFAULT_HOST_CONFIGURATION = {
 const HOST_CONFIGURATIONS = {
     // Testing
     'localhost': {
-        api: 'https://florida.mddbr.eu/api/rest/', // be aware that the URL must be the same as the one in the server (no relative paths allowed)))
+        api: 'https://devmddb.rc.ufl.edu/api/rest/', // be aware that the URL must be the same as the one in the server (no relative paths allowed)))
         primaryColor: '#eb94d3', // pink,
         logoLabel: 'florida node',
         name:'MDposit florida'
