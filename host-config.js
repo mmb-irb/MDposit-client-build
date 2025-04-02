@@ -323,9 +323,9 @@ const HOST_CONFIGURATIONS = {
         logoLabel: 'PKLR node',
         name:'PKLR@MDDB'
     },
-    // FLORIDA
+    // FLORIDA DEV
     'devmddb.rc.ufl.edu': {
-        production: true,
+        production: false,
         api: 'https://devmddb.rc.ufl.edu/api/rest/', // be aware that the URL must be the same as the one in the server (no relative paths allowed)))
         primaryColor: '#eb94d3', // pink,
         logoLabel: 'florida node',
