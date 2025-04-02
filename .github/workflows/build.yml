@@ -66,17 +66,23 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: build-artifacts
-        path: build_output
-        
-    - name: Checkout deployment repo (public)
+        path: artifacts
+
+    - name: Checkout current repo
       uses: actions/checkout@v4
       with:
         token: ${{ secrets.DEPLOY_TOKEN }}
+        fetch-depth: 0  # Important for git operations
+
+    - name: Verify downloaded artifacts
+      run: |
+        ls -R artifacts  # Debug: Show artifact structure
+        echo "Current directory: $(pwd)"
         
     - name: Deploy build
       run: |
-        cp -r build_output/build ./
-        cp -r build_output/build.zip ./
+        cp -r artifacts/build ./
+        cp artifacts/build.zip ./
         git config --global user.email "ci@example.com"
         git config --global user.name "GitHub Actions CI"
         git add build build.zip
