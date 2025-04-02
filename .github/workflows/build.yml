@@ -25,7 +25,7 @@ jobs:
     - name: Verify directory structure
       run: |
         ls -la private_repo/
-        ls -la jsc/ 
+        ls -la ./ 
 
     - name: Set up Node.js
       uses: actions/setup-node@v4
@@ -34,21 +34,21 @@ jobs:
         
     - name: Copy host config
       run: |
-        cp host-config.js private_repo/mdposit-client/src
+        cp ./host-config.js private_repo/src
         
     - name: Install dependencies
-      working-directory: private_repo/mdposit-client
+      working-directory: private_repo
       run: |
         touch .env
         npm install
         
     - name: Build application
-      working-directory: private_repo/mdposit-client
+      working-directory: private_repo
       run: npm run build
         
     - name: Archive build artifacts
       run: |
-        cp -r private_repo/mdposit-client/build ./build
+        cp -r private_repo/build ./build
         zip -r build.zip build
         
     - name: Upload artifacts
