@@ -29,21 +29,21 @@ jobs:
         
     - name: Copy host config
       run: |
-        cp private_repo/host-config.js mdposit-client/src
+        cp host-config.js private_repo/mdposit-client/src
         
     - name: Install dependencies
-      working-directory: ./mdposit-client
+      working-directory: private_repo/mdposit-client
       run: |
         touch .env
         npm install
         
     - name: Build application
-      working-directory: ./mdposit-client
+      working-directory: private_repo/mdposit-client
       run: npm run build
         
     - name: Archive build artifacts
       run: |
-        cp -r mdposit-client/build ./build
+        cp -r private_repo/mdposit-client/build ./build
         zip -r build.zip build
         
     - name: Upload artifacts
