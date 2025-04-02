@@ -1,0 +1,81 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: [ main ]
+  paths-ignore:
+      - '.gitignore'
+      - 'LICENSE'
+      - 'README.md'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout current repo
+      uses: actions/checkout@v4
+      
+    - name: Clone private repository
+      uses: actions/checkout@v4
+      with:
+        repository: mmb-irb/mdposit-client
+        token: ${{ secrets.PRIVATE_REPO_PAT }}  # Or a custom PAT with repo access
+        path: private_repo
+        
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '16.19.1'  # Specify your Node version
+        
+    - name: Copy host config
+      run: |
+        cp private_repo/host-config.js mdposit-client/src
+        
+    - name: Install dependencies
+      working-directory: ./mdposit-client
+      run: |
+        touch .env
+        npm install
+        
+    - name: Build application
+      working-directory: ./mdposit-client
+      run: npm run build
+        
+    - name: Archive build artifacts
+      run: |
+        cp -r mdposit-client/build ./build
+        zip -r build.zip build
+        
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: build-artifacts
+        path: |
+          build
+          build.zip
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Download artifacts
+      uses: actions/download-artifact@v4
+      with:
+        name: build-artifacts
+        
+    - name: Checkout deployment repo
+      uses: actions/checkout@v4
+      with:
+        repository: mmb-irb/MDposit-client-build
+        token: ${{ secrets.DEPLOY_TOKEN }}  # PAT with write access
+        path: deploy-repo
+        
+    - name: Deploy build
+      run: |
+        cp -r build deploy-repo
+        cd deploy-repo
+        git config --global user.email "ci@example.com"
+        git config --global user.name "GitHub Actions CI"
+        git add build build.zip
+        git commit -m "Deploy new build for MDposit"
+        git push

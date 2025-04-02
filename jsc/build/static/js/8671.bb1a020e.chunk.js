@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmdposit=self.webpackChunkmdposit||[]).push([[8671],{8671:(s,e,t)=>{s.exports=t.p+"static/media/index.test.js.db6055b1791ff42d42f6.snap"}}]);
