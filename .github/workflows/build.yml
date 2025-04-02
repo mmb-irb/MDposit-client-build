@@ -3,10 +3,8 @@ name: Build and Deploy
 on:
   push:
     branches: [ main ]
-    paths-ignore:
-      - '.gitignore'
-      - 'LICENSE'
-      - 'README.md'
+    paths:
+      - 'host-config.js'
 
 jobs:
   build:
@@ -68,17 +66,15 @@ jobs:
       with:
         name: build-artifacts
         
-    - name: Checkout deployment repo
+    - name: Checkout deployment repo (public)
       uses: actions/checkout@v4
       with:
-        repository: mmb-irb/MDposit-client-build
-        token: ${{ secrets.DEPLOY_TOKEN }}  # PAT with write access
-        path: deploy-repo
+        token: ${{ secrets.DEPLOY_TOKEN }}
         
     - name: Deploy build
       run: |
-        cp -r build deploy-repo
-        cd deploy-repo
+        cp -r build ./
+        cp -r build.zip ./
         git config --global user.email "ci@example.com"
         git config --global user.name "GitHub Actions CI"
         git add build build.zip
