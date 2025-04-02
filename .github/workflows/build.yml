@@ -18,7 +18,7 @@ jobs:
       uses: actions/checkout@v4
       with:
         repository: mmb-irb/mdposit-client
-        token: ${{ secrets.PRIVATE_REPO_PAT }}  # Or a custom PAT with repo access
+        token: ${{ secrets.PRIVATE_REPO_PAT }}
         path: private_repo
         
     - name: Verify directory structure
@@ -29,7 +29,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '16.19.1'  # Specify your Node version
+        node-version: '16.19.1'
         
     - name: Copy host config
       run: |
@@ -66,6 +66,7 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: build-artifacts
+        path: build_output
         
     - name: Checkout deployment repo (public)
       uses: actions/checkout@v4
@@ -74,10 +75,10 @@ jobs:
         
     - name: Deploy build
       run: |
-        cp -r build ./
-        cp -r build.zip ./
+        cp -r build_output/build ./
+        cp -r build_output/build.zip ./
         git config --global user.email "ci@example.com"
         git config --global user.name "GitHub Actions CI"
         git add build build.zip
-        git commit -m "Deploy new build for MDposit"
+        git commit -m "Deploy new build for MDposit client"
         git push
