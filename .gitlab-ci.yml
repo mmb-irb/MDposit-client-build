@@ -19,33 +19,11 @@ before_script:
     node -v
     npm -v
 
-build_job:
-  stage: build
-  script:
-    - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@mmb.irbbarcelona.org/gitlab/d.beltran.anadon/mdposit_client.git
-    - cp florida/host-config.js mdposit_client/src
-    - cd mdposit_client
-    - touch .env
-    - npm install
-    - npm run build
-    - cp -r build ../build
-  artifacts:
-    paths:
-      - build
-
-deploy_job:
-  stage: deploy
-  script:
-    - cd florida
-    - git config --global user.email "genis.bayarri@irbbarcelona.org"
-    - git config --global user.name "Automatic CI/CD"
-    - git clone https://oauth2:${GITLAB_ACCESS_TOKEN}@mmb.irbbarcelona.org/gitlab/gbayarri/mdposit-client-build.git
-    - cd mdposit-client-build
-    - cp -r ../../build ./florida
-    - cd florida
-    - zip -r build.zip build
-    - git add build build.zip
-    - git commit -m "Deploy new build for florida"
-    - git push origin main
-  dependencies:
-    - build_job
+include:
+  - local: 'jsc/ci.yml'
+  - local: 'rpbs/ci.yml'
+  - local: 'podman/ci.yml'
+  - local: 'irb/ci.yml'
+  - local: 'bsc/ci.yml'
+  - local: 'florida/ci.yml'
+  - local: 'inria/ci.yml'
