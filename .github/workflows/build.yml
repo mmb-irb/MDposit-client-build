@@ -47,7 +47,9 @@ jobs:
         
     - name: Archive build artifacts
       run: |
-        cp -r private_repo/build ./build
+        rm -rf build
+        rm -f build.zip
+        cp -r private_repo/build ./
         ls -la ./ # Debug: Show current directory
         ls -la ./build # Debug: Show build directory
         zip -r build.zip build
