@@ -6,7 +6,7 @@
 
 Common build for the different node clients of the **MDDB MDposit** project. Download the [**build.zip**](./build.zip) file with all the files needed for deploying the MDposit client in any of its flavours.
 
-## Add new client
+## Add new client
 
 Open the [**host-config.js**](./host-config.js) file and insert the new data into **HOST_CONFIGURATIONS**:
 
