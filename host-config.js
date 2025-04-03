@@ -32,6 +32,8 @@ import defaultQueryFields from "src/utils/constants/query-fields";
 // Get the requesting URL domain
 const HOST = window.location.hostname;
 
+console.log('Host: ', HOST);
+
 // Set default values for every host config fields
 // These values are used to fill missing values
 const DEFAUL_HOST_CONFIGURATION = {
