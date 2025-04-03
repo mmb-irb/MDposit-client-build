@@ -34,7 +34,6 @@ jobs:
     - name: Copy host config
       run: |
         cp ./host-config.js private_repo/src
-        ls -la private_repo/src # Debug: Check if the file is copied correctly
         
     - name: Install dependencies
       working-directory: private_repo
@@ -49,6 +48,8 @@ jobs:
     - name: Archive build artifacts
       run: |
         cp -r private_repo/build ./build
+        ls -la ./ # Debug: Show current directory
+        ls -la ./build # Debug: Show build directory
         zip -r build.zip build
         
     - name: Upload artifacts
