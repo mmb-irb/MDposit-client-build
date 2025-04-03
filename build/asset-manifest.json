@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.1cf9c198.css",
-    "main.js": "./static/js/main.59a32dc5.js",
+    "main.js": "./static/js/main.0710f042.js",
     "intersection-observer.js": "./static/js/intersection-observer.e95f0f77.chunk.js",
     "embed.css": "./static/css/embed.b0018109.chunk.css",
     "embed.js": "./static/js/embed.3c7bf12b.chunk.js",
@@ -229,7 +229,7 @@
     "static/media/index.test.js.snap": "./static/media/index.test.js.db6055b1791ff42d42f6.snap",
     "index.html": "./index.html",
     "main.1cf9c198.css.map": "./static/css/main.1cf9c198.css.map",
-    "main.59a32dc5.js.map": "./static/js/main.59a32dc5.js.map",
+    "main.0710f042.js.map": "./static/js/main.0710f042.js.map",
     "intersection-observer.e95f0f77.chunk.js.map": "./static/js/intersection-observer.e95f0f77.chunk.js.map",
     "embed.b0018109.chunk.css.map": "./static/css/embed.b0018109.chunk.css.map",
     "embed.3c7bf12b.chunk.js.map": "./static/js/embed.3c7bf12b.chunk.js.map",
@@ -417,6 +417,6 @@
   },
   "entrypoints": [
     "static/css/main.1cf9c198.css",
-    "static/js/main.59a32dc5.js"
+    "static/js/main.0710f042.js"
   ]
 }

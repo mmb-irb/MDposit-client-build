@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/5471.0ecbeb7f.chunk.css","mappings":"AAAA,qBACE,UACF,CAEA,8BACE,iBACF","sources":["pages/accession/lipid-order/style.module.css"],"sourcesContent":[".card {\n  margin: 1em;\n}\n\n.margined-bottom {\n  margin-bottom: 1em;\n}\n"],"names":[],"sourceRoot":""}
