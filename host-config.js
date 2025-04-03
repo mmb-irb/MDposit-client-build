@@ -32,6 +32,8 @@ import defaultQueryFields from "src/utils/constants/query-fields";
 // Get the requesting URL domain
 const HOST = window.location.hostname;
 
+console.log('Host: ', window.location);
+
 // Set default values for every host config fields
 // These values are used to fill missing values
 const DEFAUL_HOST_CONFIGURATION = {
@@ -243,7 +245,7 @@ const HOST_CONFIGURATIONS = {
     // IRB node development
     'irb-dev.mddbr.eu': {
         logoLabel: 'IRB node dev',
-        primaryColor: '#BB00BB', // Purple
+        primaryColor: '#ff0000', // RED (testing)
         description: <>
             {DEFAUL_HOST_CONFIGURATION.description}<br/>
             This node contains simulations stored at the MMB group at IRB Barcelona.
