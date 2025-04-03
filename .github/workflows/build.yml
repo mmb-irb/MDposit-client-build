@@ -86,6 +86,8 @@ jobs:
         
     - name: Deploy build
       run: |
+        rm -rf build
+        rm -f build.zip
         cp -r artifacts/build ./
         cp artifacts/build.zip ./
         git config --global user.email "ci@example.com"
