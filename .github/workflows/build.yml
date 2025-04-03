@@ -34,6 +34,7 @@ jobs:
     - name: Copy host config
       run: |
         cp ./host-config.js private_repo/src
+        ls -la private_repo/src # Debug: Check if the file is copied correctly
         
     - name: Install dependencies
       working-directory: private_repo
