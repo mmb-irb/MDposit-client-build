@@ -6,6 +6,22 @@
 
 Common build for the different node clients of the **MDDB MDposit** project. Download the [**build.zip**](./build.zip) file with all the files needed for deploying the MDposit client in any of its flavours.
 
+## Add new client
+
+Open the [**host-config.js**](./host-config.js) file and insert the new data into **HOST_CONFIGURATIONS**:
+
+```js
+'<URL>': {
+    production: false, // production or development
+    api: 'https://<URL>/api/rest/', // be aware that the URL must be the same as the one in the server (no relative paths allowed)))
+    primaryColor: '#000000', // main color for the node
+    logoLabel: '<NODE> node',
+    name:'MDposit <NODE>'
+}
+```
+
+Once the data is pushed, the [**build.yml**](./.github/workflows/build.yml) GitHub action will take care of creating the new build automatically.
+
 ## Setup
 
 As this repo gets data from a private repo for building the [**build.zip**](./build.zip) file, a couple of secrets are needed:
