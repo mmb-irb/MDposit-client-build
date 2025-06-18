@@ -47,7 +47,7 @@ const DEFAUL_HOST_CONFIGURATION = {
     </>,
     logo: 'logo-mdposit',
     logoLabel: '',
-    primaryColor: '#808081', // Grey
+    primaryColor: '#808080', // Grey
     secondaryColor: '#fafafa', // Light grey
     searchExample: 'e.g. Orozco lab',
     optionsField: undefined, // No browser selector and no data summary pie chart by default
@@ -191,8 +191,21 @@ const covidDescription = <>
 const HOST_CONFIGURATIONS = {
     // Testing
     'localhost': {
-        api: 'https://mmb-dev.mddbr.eu/api/rest/',
-        primaryColor: '#707070', // Grey
+        api: 'https://irb-dev.mddbr.eu/api/rest/',
+        palette: {
+            primary: {
+            light: '#eeeeee',
+            main:'rgb(145, 142, 142)', // Grey
+            dark:'rgb(223, 223, 223)',
+            contrastText: '#fff',
+            },  
+            secondary: {
+            light: '#f5f5f5',
+            main:'rgb(122, 122, 122)',
+            dark: 'rgb(163, 163, 163)',
+            contrastText: '#fff',
+            },
+        },
     },
     // MDposit development
     'mdposit-dev.mddbr.eu': {
@@ -242,21 +255,32 @@ const HOST_CONFIGURATIONS = {
     },
     // IRB node development
     'irb-dev.mddbr.eu': {
-        logoLabel: 'IRB dev',
-        primaryColor: '#BB00BB', // RED (testing)
+        logoLabel: 'IRB node',
+        palette: {
+            primary: {
+            main: '#cf05ca', // R207 G5 B202
+            dark: '#4116a3', // R65 G22 B163
+            contrastText: '#fff', 
+            },
+            secondary: {
+            main: '#aa00ff', // R58 G41 9915E7
+            dark: '#9915E7', // R153 G21 B231 not used
+            contrastText: 'rgb(236, 236, 236)',
+            },
+        },
         description: <>
             {DEFAUL_HOST_CONFIGURATION.description}<br/>
             This node contains simulations stored at the MMB group at IRB Barcelona.
         </>,
         ...COLLECTION_OPTIONS,
         queryFields: queryFieldsWithCollections,
-        name:'MDposit IRB development'
     },
     // IRB node production
     'irb.mddbr.eu': {
         production: true,
         logoLabel: 'IRB node',
         primaryColor: '#BB00BB', // Purple
+        secondaryColor: '#4116a3', // Dark Purple
         description: <>
             {DEFAUL_HOST_CONFIGURATION.description}<br/>
             This node contains simulations stored at the MMB group at IRB Barcelona.
@@ -283,8 +307,50 @@ const HOST_CONFIGURATIONS = {
             This node contains simulations from the Ascona B-DNA Consortium.
         </>
     },
+    // Oxford node development
+    'oxford-dev.mddbr.eu': {
+        logoLabel: 'Oxford node',
+        primaryColor: '#66CC00', // Green as it is the Oxfrod landscape <3
+        description: <>
+            {DEFAUL_HOST_CONFIGURATION.description}<br/>
+            This node contains simulations from the Oxford University node.
+        </>
+    },
+    // Oxford node production
+    'oxford.mddbr.eu': {
+        production: true,
+        logoLabel: 'Oxford node',
+        primaryColor: '#66CC00', // Green as it is the Oxfrod landscape <3
+        description: <>
+            {DEFAUL_HOST_CONFIGURATION.description}<br/>
+            This node contains simulations from the Oxford University node.
+        </>
+    },
+    // Cineca node
+    'cineca.mddbr.eu': {
+        //production: true,
+        logoLabel: 'Cineca node',
+        palette: {
+            primary: {
+            light: '#00e5ff',
+            main: '#99FFFF', // Light blue
+            dark: '#00b8d4',
+            contrastText: '#fff',
+            },
+            secondary: {
+                light: '#84ffff',
+                main: '#00e5ff',
+                dark: '#00b8d4',
+                contrastText: '#000',
+            },
+        },
+        description: <>
+            {DEFAUL_HOST_CONFIGURATION.description}<br/>
+            This node contains simulations from the Cineca node in Bologna.
+        </>
+    },
     // BioExcel covid19 development
-    'bioexcel-cv19-dev.bsc.es': {
+    'bioexcel-cv19-dev.mddbr.eu': {
         description: covidDescription,
         name: 'BioExcel - Covid19',
         favicon: 'bioexcel_favicon',
@@ -296,7 +362,7 @@ const HOST_CONFIGURATIONS = {
         options: ['covid'] // Enable covid specific analyses
     },
     // BioExcel covid19 production
-    'bioexcel-cv19.bsc.es': {
+    'bioexcel-cv19.mddbr.eu': {
         production: true,
         name: 'BioExcel - Covid19',
         favicon: 'bioexcel_favicon',
@@ -311,7 +377,6 @@ const HOST_CONFIGURATIONS = {
     // JSC
     'jsc.mddbr.eu': {
         production: true,
-        api: 'https://jsc.mddbr.eu/api/rest/', // be aware that the URL must be the same as the one in the server (no relative paths allowed)))
         primaryColor: '#c5b96b', // Golden,
         logoLabel: 'JSC node',
         name:'MDposit JSC'
@@ -319,7 +384,6 @@ const HOST_CONFIGURATIONS = {
     // BSC
     'bsc.mddbr.eu': {
         production: true,
-        api: 'https://bsc.mddbr.eu/api/rest/', // be aware that the URL must be the same as the one in the server (no relative paths allowed)))
         primaryColor: '#a8cdf3', // Golden,
         logoLabel: 'PKLR node',
         name:'PKLR@MDDB'
@@ -327,7 +391,6 @@ const HOST_CONFIGURATIONS = {
     // FLORIDA DEV
     'devmddb.rc.ufl.edu': {
         production: false,
-        api: 'https://devmddb.rc.ufl.edu/api/rest/', // be aware that the URL must be the same as the one in the server (no relative paths allowed)))
         primaryColor: '#eb94d3', // pink,
         logoLabel: 'florida node',
         name:'MDposit florida'
@@ -335,7 +398,6 @@ const HOST_CONFIGURATIONS = {
     // INRIA
     'inria.mddbr.eu': {
         production: true,
-        api: 'https://inria.mddbr.eu/api/rest/', // be aware that the URL must be the same as the one in the server (no relative paths allowed)))
         primaryColor: '#5e8568', // green,
         logoLabel: 'inria node',
         name:'MDposit inria'
@@ -343,15 +405,13 @@ const HOST_CONFIGURATIONS = {
     // RPBS
     'rpbs.mddbr.eu': {
         production: true,
-        api: 'https://rpbs.mddbr.eu/api/rest/', // be aware that the URL must be the same as the one in the server (no relative paths allowed)))
         primaryColor: '#6bc5b8', // Turquoise,
         logoLabel: 'RPBS node',
         name:'MDposit RPBS'
     },
     // PODMAN DEV
-    '10.4.96.40': {
+    'devmddb.rc.ufl.edu': {
         production: false,
-        api: 'https://10.4.96.40/api/rest/', // be aware that the URL must be the same as the one in the server (no relative paths allowed)))
         primaryColor: '#ff0000', // Golden,
         logoLabel: 'Podman node',
         name:'MDposit Podman'
@@ -359,13 +419,14 @@ const HOST_CONFIGURATIONS = {
     // Nostrum
     '3.144.224.102': {
         api: `http://3.144.224.102/api/rest/`,
-        primaryColor: '#00cfbf', // Golden
+        primaryColor: '#00cfbf', // Light blue
         logo: 'logo-nostrum',
         name:'XNA Hub'
     },
 };
 
 // Set the current host configuration
+if (!(HOST in HOST_CONFIGURATIONS)) console.error(`Unknown host "${HOST}". Using default configuration.`)
 const HOST_CONFIG = HOST_CONFIGURATIONS[HOST] || HOST_CONFIGURATIONS['localhost'];
 //const HOST_CONFIG = HOST_CONFIGURATIONS['mdposit-dev.mddbr.eu'];
 
