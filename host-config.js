@@ -402,24 +402,6 @@ const HOST_CONFIGURATIONS = {
         logoLabel: 'inria node',
         name:'MDposit inria'
     },
-    'inria.mddbr.eu': {
-        production: true,
-        primaryColor: '#5e8568', // green,
-        logoLabel: 'inria node',
-        name:'MDposit inria'
-    },
-    'inria.mddbr.eu': {
-        production: true,
-        primaryColor: '#5e8568', // green,
-        logoLabel: 'inria node',
-        name:'MDposit inria'
-    },
-    'inria.mddbr.eu': {
-        production: true,
-        primaryColor: '#5e8568', // green,
-        logoLabel: 'inria node',
-        name:'MDposit inria'
-    },
     'dynarepo.lhs.loria.fr': {
         production: true,
         primaryColor: '#5e8568', // green,
