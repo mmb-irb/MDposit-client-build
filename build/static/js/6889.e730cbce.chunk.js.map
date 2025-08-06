@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/6889.e730cbce.chunk.js","mappings":"2IACA,Q,SAAyB,O","sources":["pages/accession/lipid-inter/index.js"],"sourcesContent":["import LipidInter from './lipid-inter';\nexport default LipidInter;"],"names":[],"sourceRoot":""}
