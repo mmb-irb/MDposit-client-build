@@ -10,7 +10,7 @@ Common build for the different node clients of the **MDDB MDposit** project.
 
 Log in to the MDDB node to update as the user with docker permissions. Access to the folder where the [MDDB docker repo](https://github.com/mmb-irb/MDDB-docker) is and execute:
 
-    python3 scripts/rebuild.py -s vre_lite -t my_stack
+    python3 scripts/rebuild.py -s client -t my_stack
 
 ## Credits
 
