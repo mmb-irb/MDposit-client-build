@@ -4,75 +4,13 @@
 <img src="md-build.png" alt="mdposit" />
 </div>
 
-Common build for the different node clients of the **MDDB MDposit** project. Download the [**build.zip**](./build.zip) file with all the files needed for deploying the MDposit client in any of its flavours.
+Common build for the different node clients of the **MDDB MDposit** project. 
 
-## Add new client
+## Deploy into an MDDB node
 
-Open the [**host-config.js**](./host-config.js) file and insert the new data into **HOST_CONFIGURATIONS**:
+Log in to the MDDB node to update as the user with docker permissions. Access to the folder where the [MDDB docker repo](https://github.com/mmb-irb/MDDB-docker) is and execute:
 
-```js
-'<URL>': {
-    production: false, // production or development
-    api: 'https://<URL>/api/rest/', // be aware that the URL must be the same as the one in the server (no relative paths allowed)))
-    primaryColor: '#000000', // main color for the node
-    logoLabel: '<NODE> node',
-    name:'MDposit <NODE>'
-}
-```
-
-Once the data is pushed, the [**build.yml**](./.github/workflows/build.yml) GitHub action will take care of creating the new build automatically.
-
-## Setup
-
-As this repo gets data from a private repo for building the [**build.zip**](./build.zip) file, a couple of secrets are needed:
-
-### Generating GITHUB_TOKEN
-
-1. Go to GitHub → Settings → Developer settings → Personal access tokens → Fine-grained tokens
-
-2. Click "Generate new token" → "Fine-grained personal access token"
-
-    * Repository Access: Select ORG_NAME/PRIVATE_REPO
-
-    * Permissions:
-
-        * Contents: Read-Only
-
-    * Set an expiration date (optional).
-
-3. Copy the token and add it as a secret in your repository
-
-    * Go to Settings → Secrets and variables → Actions
-
-    * Click New repository secret
-
-    * Name it PRIVATE_REPO_PAT
-
-    * Paste the token
-
-### Generating DEPLOY_TOKEN
-
-1. Go to GitHub → Settings → Developer settings → Personal access tokens → Fine-grained tokens
-
-2. Generate a new token:
-
-    * Repository Access: Select ORG_NAME/CURRENT_REPO
-
-    * Permissions:
-
-      * Contents: Read & Write
-
-    * Expiration: (Optional)
-
-3. Save the token and add it to GitHub Actions secrets in your repository:
-
-    *  Go to Settings → Secrets and variables → Actions
-
-    * Click New repository secret
-
-    * Name it DEPLOY_TOKEN
-
-    * Paste the token
+    python3 scripts/rebuild.py -s vre_lite -t my_stack
 
 ## Credits
 
