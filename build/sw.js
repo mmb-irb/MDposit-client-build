@@ -18,7 +18,7 @@ workbox.precaching.cleanupOutdatedCaches();
 workbox.precaching.precacheAndRoute([
   {
     "url": "index.html",
-    "revision": "45c2afdeca42e18881f5d73489815e7d"
+    "revision": "f908583e4f3072b73bc15b3e0244a9cd"
   },
   {
     "url": "static/css/1181.73a5df46.chunk.css",
@@ -273,8 +273,8 @@ workbox.precaching.precacheAndRoute([
     "revision": "e1ea169bfd2e9adc2147308e71b5f1ea"
   },
   {
-    "url": "static/css/contact.8876a84b.chunk.css",
-    "revision": "e70580a2561c1b56ccea8a387d390354"
+    "url": "static/css/contact.b0770619.chunk.css",
+    "revision": "01a8b7751d6b9d6bef54b12be4a30b62"
   },
   {
     "url": "static/css/embed.68c9ec33.chunk.css",
@@ -481,8 +481,8 @@ workbox.precaching.precacheAndRoute([
     "revision": "acdb6b727d4b9059c2817b5ae4e50cba"
   },
   {
-    "url": "static/js/4061.620ecad8.chunk.js",
-    "revision": "c0c971a37560de22ef9359bd3bb2e3ce"
+    "url": "static/js/4061.1665b5d0.chunk.js",
+    "revision": "fb65a5f0208aac51b260356b44931a0d"
   },
   {
     "url": "static/js/4172.8a194ec9.chunk.js",
@@ -537,8 +537,8 @@ workbox.precaching.precacheAndRoute([
     "revision": "aa4057129d5013be7f311e78e271d5ad"
   },
   {
-    "url": "static/js/5633.a4ae6948.chunk.js",
-    "revision": "11e0b39bc04ebb62219aaae38d9acd1e"
+    "url": "static/js/5633.cd9c584a.chunk.js",
+    "revision": "820c1ce15fbd5b13f360b37791a2fa25"
   },
   {
     "url": "static/js/5709.b94a7cfa.chunk.js",
@@ -585,8 +585,8 @@ workbox.precaching.precacheAndRoute([
     "revision": "c2fcb847a5b8a1ecc53082cc8db404f8"
   },
   {
-    "url": "static/js/6899.c5d44d5c.chunk.js",
-    "revision": "0f75fcc190a334d9bec1f892fddd0709"
+    "url": "static/js/6899.b0744db6.chunk.js",
+    "revision": "57ca0325da5deac09a5acb253380c07d"
   },
   {
     "url": "static/js/7197.3777582f.chunk.js",
@@ -729,8 +729,8 @@ workbox.precaching.precacheAndRoute([
     "revision": "4cda3f28b08ec49500f0dbdd85269e80"
   },
   {
-    "url": "static/js/contact.999fd30b.chunk.js",
-    "revision": "9d3e60cdfe946ebb2c016424e41c8e7f"
+    "url": "static/js/contact.a250e640.chunk.js",
+    "revision": "112b4996dbebb63cf3cf7cc3fd62df99"
   },
   {
     "url": "static/js/embed.8ba40b03.chunk.js",
@@ -761,16 +761,16 @@ workbox.precaching.precacheAndRoute([
     "revision": "c4894e44e6b6dac08e55b7febf14ad94"
   },
   {
-    "url": "static/js/main.dac1794e.js",
-    "revision": "dd64e89435aac71ec035d5d7617ef6bf"
+    "url": "static/js/main.231c2fb5.js",
+    "revision": "68ee0d2cf75e99873ffdb2e3a100685d"
   },
   {
-    "url": "static/js/meta-analysis.c4f0467c.chunk.js",
-    "revision": "b86ec11df7c41b7ac7b1fcae0d4cfab5"
+    "url": "static/js/meta-analysis.792898de.chunk.js",
+    "revision": "1fe1399b26d3c8fdb2d509efef97e122"
   },
   {
-    "url": "static/js/pointer.35c62441.chunk.js",
-    "revision": "f95746397b0a1ad1b48908c558a37be3"
+    "url": "static/js/pointer.0c1f414a.chunk.js",
+    "revision": "827d71d7f843f59446c79bb025e31c6c"
   },
   {
     "url": "static/js/projections.35644b4a.chunk.js",
@@ -811,6 +811,7 @@ workbox.routing.registerNavigationRoute(
       /\/[^\/]+\.[^\/]+$/,
       /\/api\//, // avoid responding to /api, because it should be outside of the scope of that service worker
       /\/optimade\//, // avoid responding to /optimade, because it should be outside of the scope of that service worker
+      /\/vre_lite\//, /\/vre\//, // exclude the VRE from the scope of the service worker
     ],
   },
 );
