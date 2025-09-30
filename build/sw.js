@@ -18,7 +18,7 @@ workbox.precaching.cleanupOutdatedCaches();
 workbox.precaching.precacheAndRoute([
   {
     "url": "index.html",
-    "revision": "f908583e4f3072b73bc15b3e0244a9cd"
+    "revision": "a6cae991020ea0ce52adfe0459c0ee43"
   },
   {
     "url": "static/css/1181.73a5df46.chunk.css",
@@ -301,8 +301,8 @@ workbox.precaching.precacheAndRoute([
     "revision": "66405903170a90de7802ea3a1ad9950b"
   },
   {
-    "url": "static/css/meta-analysis.d9fff8bc.chunk.css",
-    "revision": "d72148fd4cc3a87175de649ea50f4cf9"
+    "url": "static/css/meta-analysis.e7f120be.chunk.css",
+    "revision": "c1d95ef7e1e9471e53b1d2ee296c455a"
   },
   {
     "url": "static/css/pointer.310b7170.chunk.css",
@@ -323,10 +323,6 @@ workbox.precaching.precacheAndRoute([
   {
     "url": "static/js/1181.af808c61.chunk.js",
     "revision": "169b1cb4dc14cfbcc21ab06c37c4b946"
-  },
-  {
-    "url": "static/js/1190.e621f1e8.chunk.js",
-    "revision": "1e82e51d21dfc49bcbd6c485747c64e4"
   },
   {
     "url": "static/js/1198.972a99c6.chunk.js",
@@ -373,8 +369,8 @@ workbox.precaching.precacheAndRoute([
     "revision": "6b1f420fcf05007ac17722f9856b1a23"
   },
   {
-    "url": "static/js/247.beff8c26.chunk.js",
-    "revision": "97901100d2c2d914e5be71df953d1ed5"
+    "url": "static/js/247.657a128b.chunk.js",
+    "revision": "2f655b80c3e07d98fb2338d66d712afa"
   },
   {
     "url": "static/js/2492.537e6f33.chunk.js",
@@ -445,6 +441,10 @@ workbox.precaching.precacheAndRoute([
     "revision": "bca01f40634cd33ac80d09520979b019"
   },
   {
+    "url": "static/js/3678.e56a32c8.chunk.js",
+    "revision": "e01d8714cdf2ebeb5a69ac70dae4e20d"
+  },
+  {
     "url": "static/js/3715.1de086e1.chunk.js",
     "revision": "99e623b9458dc44508bf2c22ea2abe77"
   },
@@ -463,10 +463,6 @@ workbox.precaching.precacheAndRoute([
   {
     "url": "static/js/3845.e3925059.chunk.js",
     "revision": "c4495b5b5060005215cf767765db016a"
-  },
-  {
-    "url": "static/js/3853.e153898e.chunk.js",
-    "revision": "369810f72abf5cefe33f4661e85410db"
   },
   {
     "url": "static/js/3960.91ffe28f.chunk.js",
@@ -669,10 +665,6 @@ workbox.precaching.precacheAndRoute([
     "revision": "88e1e3a2ac72ff63f1e1fd037605cde3"
   },
   {
-    "url": "static/js/9026.83e978ac.chunk.js",
-    "revision": "214e218f2293c12e024382e02eef8a3c"
-  },
-  {
     "url": "static/js/9070.df779800.chunk.js",
     "revision": "ec4c6566adb98c32e796889f0f4a9c11"
   },
@@ -687,6 +679,10 @@ workbox.precaching.precacheAndRoute([
   {
     "url": "static/js/9222.00eabea4.chunk.js",
     "revision": "4bdd3a8df7bff541cdaa42176a4077ba"
+  },
+  {
+    "url": "static/js/9251.0c01ee30.chunk.js",
+    "revision": "648a0de91385189f237cef1569fc03d5"
   },
   {
     "url": "static/js/9280.c47bd66b.chunk.js",
@@ -711,6 +707,10 @@ workbox.precaching.precacheAndRoute([
   {
     "url": "static/js/953.27793248.chunk.js",
     "revision": "b5cac61eb18f25369902518b4e6adfbd"
+  },
+  {
+    "url": "static/js/9593.9bc47d88.chunk.js",
+    "revision": "3a417350f415491b3f138bc38d024430"
   },
   {
     "url": "static/js/9632.64a4769f.chunk.js",
@@ -761,16 +761,16 @@ workbox.precaching.precacheAndRoute([
     "revision": "c4894e44e6b6dac08e55b7febf14ad94"
   },
   {
-    "url": "static/js/main.231c2fb5.js",
-    "revision": "68ee0d2cf75e99873ffdb2e3a100685d"
+    "url": "static/js/main.bad3271d.js",
+    "revision": "0e1f2d479ebe2f69a05a34a2a10b4368"
   },
   {
-    "url": "static/js/meta-analysis.792898de.chunk.js",
-    "revision": "1fe1399b26d3c8fdb2d509efef97e122"
+    "url": "static/js/meta-analysis.117cba23.chunk.js",
+    "revision": "ae690fc424d6714ec9705f7ff0671f74"
   },
   {
-    "url": "static/js/pointer.0c1f414a.chunk.js",
-    "revision": "827d71d7f843f59446c79bb025e31c6c"
+    "url": "static/js/pointer.2c317db1.chunk.js",
+    "revision": "a0d684cdd0c067a968eb0ee421c82abc"
   },
   {
     "url": "static/js/projections.35644b4a.chunk.js",
@@ -812,6 +812,7 @@ workbox.routing.registerNavigationRoute(
       /\/api\//, // avoid responding to /api, because it should be outside of the scope of that service worker
       /\/optimade\//, // avoid responding to /optimade, because it should be outside of the scope of that service worker
       /\/vre_lite\//, /\/vre\//, // exclude the VRE from the scope of the service worker
+      /\/minio\//, // exclude MinIO from the scope of the service worker
     ],
   },
 );
