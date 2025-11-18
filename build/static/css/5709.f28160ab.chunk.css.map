@@ -1,1 +1,1 @@
-{"version":3,"file":"static/css/5709.f28160ab.chunk.css","mappings":"AAAA,yBAEE,oBAAsB,CADtB,UAEF","sources":["pages/accession/trajectory/metadata/style.module.css"],"sourcesContent":[".text-field {\n  width: 20ch;\n  margin: 1ch !important;\n}"],"names":[],"sourceRoot":""}
+{"version":3,"file":"static/css/5709.f28160ab.chunk.css","mappings":"AAAA,yBAEE,oBAAsB,CADtB,UAEF","sources":["pages/accession/trajectory/metadata/style.module.css"],"sourcesContent":[".text-field {\n  width: 20ch;\n  margin: 1ch !important;\n}"],"names":[],"ignoreList":[],"sourceRoot":""}
