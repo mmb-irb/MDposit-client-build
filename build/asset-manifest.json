@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.f485cbde.css",
-    "main.js": "./static/js/main.0c90b34f.js",
+    "main.js": "./static/js/main.a7c069b1.js",
     "intersection-observer.js": "./static/js/intersection-observer.6296de56.chunk.js",
     "embed.css": "./static/css/embed.68c9ec33.chunk.css",
     "embed.js": "./static/js/embed.e940c6b0.chunk.js",
@@ -21,7 +21,7 @@
     "contact.css": "./static/css/contact.b0770619.chunk.css",
     "contact.js": "./static/js/contact.e7b01887.chunk.js",
     "accession.css": "./static/css/accession.45fffe1f.chunk.css",
-    "accession.js": "./static/js/accession.abf0ead7.chunk.js",
+    "accession.js": "./static/js/accession.8cf0701a.chunk.js",
     "collection.css": "./static/css/collection.51fd9978.chunk.css",
     "collection.js": "./static/js/collection.92ea6cce.chunk.js",
     "collections.css": "./static/css/collections.07d49a96.chunk.css",
@@ -218,8 +218,8 @@
     "static/js/1772.b84790a3.chunk.js": "./static/js/1772.b84790a3.chunk.js",
     "static/js/7940.f875845a.chunk.js": "./static/js/7940.f875845a.chunk.js",
     "static/js/258.e74db9ae.chunk.js": "./static/js/258.e74db9ae.chunk.js",
+    "static/js/9219.8a4566ef.chunk.js": "./static/js/9219.8a4566ef.chunk.js",
     "static/js/6463.927af939.chunk.js": "./static/js/6463.927af939.chunk.js",
-    "static/js/9219.a9a6843a.chunk.js": "./static/js/9219.a9a6843a.chunk.js",
     "static/js/6401.a1c88c0e.chunk.js": "./static/js/6401.a1c88c0e.chunk.js",
     "static/js/8305.0e86249e.chunk.js": "./static/js/8305.0e86249e.chunk.js",
     "static/media/containers_schema.png": "./static/media/containers_schema.2d1a5967f9ca6d569d17.png",
@@ -276,7 +276,7 @@
     "static/media/index.test.js.snap": "./static/media/index.test.js.db6055b1791ff42d42f6.snap",
     "index.html": "./index.html",
     "main.f485cbde.css.map": "./static/css/main.f485cbde.css.map",
-    "main.0c90b34f.js.map": "./static/js/main.0c90b34f.js.map",
+    "main.a7c069b1.js.map": "./static/js/main.a7c069b1.js.map",
     "intersection-observer.6296de56.chunk.js.map": "./static/js/intersection-observer.6296de56.chunk.js.map",
     "embed.68c9ec33.chunk.css.map": "./static/css/embed.68c9ec33.chunk.css.map",
     "embed.e940c6b0.chunk.js.map": "./static/js/embed.e940c6b0.chunk.js.map",
@@ -296,7 +296,7 @@
     "contact.b0770619.chunk.css.map": "./static/css/contact.b0770619.chunk.css.map",
     "contact.e7b01887.chunk.js.map": "./static/js/contact.e7b01887.chunk.js.map",
     "accession.45fffe1f.chunk.css.map": "./static/css/accession.45fffe1f.chunk.css.map",
-    "accession.abf0ead7.chunk.js.map": "./static/js/accession.abf0ead7.chunk.js.map",
+    "accession.8cf0701a.chunk.js.map": "./static/js/accession.8cf0701a.chunk.js.map",
     "collection.51fd9978.chunk.css.map": "./static/css/collection.51fd9978.chunk.css.map",
     "collection.92ea6cce.chunk.js.map": "./static/js/collection.92ea6cce.chunk.js.map",
     "collections.07d49a96.chunk.css.map": "./static/css/collections.07d49a96.chunk.css.map",
@@ -492,13 +492,13 @@
     "1772.b84790a3.chunk.js.map": "./static/js/1772.b84790a3.chunk.js.map",
     "7940.f875845a.chunk.js.map": "./static/js/7940.f875845a.chunk.js.map",
     "258.e74db9ae.chunk.js.map": "./static/js/258.e74db9ae.chunk.js.map",
+    "9219.8a4566ef.chunk.js.map": "./static/js/9219.8a4566ef.chunk.js.map",
     "6463.927af939.chunk.js.map": "./static/js/6463.927af939.chunk.js.map",
-    "9219.a9a6843a.chunk.js.map": "./static/js/9219.a9a6843a.chunk.js.map",
     "6401.a1c88c0e.chunk.js.map": "./static/js/6401.a1c88c0e.chunk.js.map",
     "8305.0e86249e.chunk.js.map": "./static/js/8305.0e86249e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f485cbde.css",
-    "static/js/main.0c90b34f.js"
+    "static/js/main.a7c069b1.js"
   ]
 }
