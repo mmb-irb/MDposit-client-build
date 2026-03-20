@@ -1,0 +1,2 @@
+"use strict";(globalThis.webpackChunkmdposit=globalThis.webpackChunkmdposit||[]).push([[2881],{42881(e,l,_){_.r(l),_.d(l,{default:()=>a});const a={paper:"style_paper__3rwjT",tablecard:"style_tablecard__zkclz",nglcard:"style_nglcard__Giv4e",margined:"style_margined__oYYKj",container:"style_container__LW09U",selectedrow:"style_selectedrow__J0gnV",graph:"style_graph__tgzxk","graph-placeholder":"style_graph-placeholder__QpX0O"}}}]);
+//# sourceMappingURL=2881.6ec8147b.chunk.js.map

@@ -1,0 +1,2 @@
+"use strict";(globalThis.webpackChunkmdposit=globalThis.webpackChunkmdposit||[]).push([[6344],{66344(s,a,t){t.r(a),t.d(a,{default:()=>c});const c={card:"style_card__KGoPv"}}}]);
+//# sourceMappingURL=6344.019bafdd.chunk.js.map
