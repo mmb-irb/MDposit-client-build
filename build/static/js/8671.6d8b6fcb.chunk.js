@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkmdposit||=[]).push([[8671],{8671(s,t,e){s.exports=e.p+"static/media/index.test.js.db6055b1791ff42d42f6.snap"}}]);
