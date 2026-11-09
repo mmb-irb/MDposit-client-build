@@ -1,0 +1,1 @@
+import{j as e}from"./main.BpXAPdRp.js";const l=({name:i,id:n,page:t,url:o})=>{let r=o;if(r||(r=t&&`/#/${t}`),r||(r=n&&`/#/help#${n}`),!r)throw new Error("Missing argument in TextLink component");return e.jsx(e.Fragment,{children:e.jsx("a",{href:r,target:"_blank",rel:"noreferrer noopener",children:i})})};export{l as T};

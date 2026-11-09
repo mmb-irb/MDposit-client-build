@@ -1,0 +1,1 @@
+const u=n=>{if(!n)return;const r=n.reduce((s,c)=>s+c,0),t=n.length;return r/t},g=n=>{if(!n)return;const r=n.reduce((e,o)=>e+o,0),t=n.length,s=r/t,c=Math.sqrt(n.map(e=>Math.pow(e-s,2)).reduce((e,o)=>e+o)/t);return{mean:s,stdv:c}};export{g as a,u as g};

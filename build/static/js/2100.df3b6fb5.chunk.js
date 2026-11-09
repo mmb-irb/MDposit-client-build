@@ -1,2 +1,0 @@
-"use strict";(globalThis.webpackChunkmdposit||=[]).push([[2100],{62100(t,s,d){d.r(s);d.d(s,["default",0,{card:"style_card__9qUkb",right:"style_right__Y0Fdo"}])}}]);
-//# sourceMappingURL=2100.df3b6fb5.chunk.js.map

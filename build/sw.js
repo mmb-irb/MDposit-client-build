@@ -1,5 +1,6 @@
 /* This file is auto-generated, please do not edit it manually */
 
+// The API below is Workbox 4's: v5 removed registerNavigationRoute and renamed the plugins
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js');
 
 const MINUTE = 60; // seconds
@@ -18,10 +19,10 @@ workbox.precaching.cleanupOutdatedCaches();
 workbox.precaching.precacheAndRoute([
   {
     "url": "index.html",
-    "revision": "f287ebc12a6e2c58cb00975bee3645e8"
+    "revision": "dd48fd1c7768cfa32b5a3a1501a9111f"
   },
   {
-    "url": "static/js/main.e724a653.js"
+    "url": "static/js/main.BpXAPdRp.js"
   }
 ], {}); // content will be injected here
 

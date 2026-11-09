@@ -1,0 +1,1 @@
+const c=(a,b,l,e=0)=>{const t=a.getBoundingClientRect(),s=b.getBoundingClientRect();let i=l.x;if(Math.abs(t.left-i)>Math.abs(i-t.right)){const n=s.right-s.left;i-=e+n}else i+=e;i-=t.left;let o=l.y;if(Math.abs(t.top-o)>Math.abs(o-t.bottom)){const n=s.bottom-s.top;o-=e+n}else o+=e;return o-=t.top,{x:i,y:o}};export{c as s};

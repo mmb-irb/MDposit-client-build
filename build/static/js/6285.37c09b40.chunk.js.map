@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/6285.b47fae65.chunk.js","mappings":"0FACA,MAAAA,WAAyB","sources":["pages/accession/lipid-order/index.js"],"sourcesContent":["import LipidOrder from './lipid-order';\nexport default LipidOrder;"],"names":["__WEBPACK_DEFAULT_EXPORT__"],"sourceRoot":""}
