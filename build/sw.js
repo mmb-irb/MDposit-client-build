@@ -19,10 +19,10 @@ workbox.precaching.cleanupOutdatedCaches();
 workbox.precaching.precacheAndRoute([
   {
     "url": "index.html",
-    "revision": "d013950efb08e4b7686cdbcafd9fc36a"
+    "revision": "b208069adcb328092fd77cc71878ef83"
   },
   {
-    "url": "static/js/main.OoqSKD4r.js"
+    "url": "static/js/main.Dvg-4Rkk.js"
   }
 ], {}); // content will be injected here
 

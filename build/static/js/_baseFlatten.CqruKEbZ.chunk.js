@@ -1,1 +1,0 @@
-import{i as f,a as b}from"./_arrayPush.RhOoujvE.chunk.js";import{S as t}from"./index.Bj52VDRp.chunk.js";import{i as h}from"./isArray.Dxzbedgu.chunk.js";var m=t?t.isConcatSpreadable:void 0;function p(n){return h(n)||f(n)||!!(m&&n&&n[m])}function l(n,d,a,s,i){var r=-1,e=n.length;for(a||(a=p),i||(i=[]);++r<e;){var o=n[r];a(o)?b(i,o):s||(i[i.length]=o)}return i}export{l as b};
